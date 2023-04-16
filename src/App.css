@@ -30,6 +30,7 @@ ul{
 }
 .app__form{
     font-family: inherit;
+    z-index: 1000;;
 }
 .app__input{
     font-family: inherit;
@@ -97,12 +98,5 @@ ul{
     }
     .footer__h3{
         font-size: 14px;
-    }
-    .app__input, .app__btn{
-        height: 1.5rem;
-        font-size: 10px;
-    }
-    .app__input{
-        width: 120px; 
     }
 }
