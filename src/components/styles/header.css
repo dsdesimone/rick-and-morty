@@ -7,7 +7,6 @@
     box-shadow: 0px 0px 30px rgb(0, 0, 0, .7);
     position: relative;
     display: flex;
-    overflow: hidden;
 }
 .title__photo{
     right: -10%;
@@ -15,7 +14,9 @@
     width: 70%;
     position: absolute;
     z-index: 20;
-    
+}
+.title__photo2{
+display: none;
 }
 .header__background{
     height: 100%;
@@ -51,20 +52,40 @@
     }
 }
 @media (max-width: 900px){
-    .title__photo{
-        right: auto;
-        width: auto;
-        right: auto;
-        height: 100%;
-    }
     .header{
-        width: 85%;
-        flex-direction: column;
+        background-color: transparent;
+        box-shadow: none;
+        height: 300px;
+        margin: 0;
+        animation: move 2s forwards linear;
+        transition: ease-in-out;
         justify-content: center;
         align-items: center;
-        border: 4px solid rgba(0,4,38,1);
-        box-shadow: 0 0 15px rgba(0,4,38,1);
-        border-radius: 3em;
+    }
+    .title__photo{
+        display: none;
+    }
+    .title__photo2{
+        display: block;
+        width: 60%;
+        height: auto;
+        position: absolute;
+        right: 5%;
+    }
+    .title__name{
+        width: 50%;
+        right: 50%;
+        top: 20%;
+    }
+    @keyframes move{
+        from{
+            opacity: 0;
+            right: -30%;
+        }
+        to{
+            opacity: 1;
+            right: -20%;
+        }
     }
     .header__background{
         display: none;
@@ -72,27 +93,32 @@
     .border{
         display: none;
     }
-    .title__name{
-        width: 400px;
-        top: 40%;
-        
-    }
+    
 }
 @media (max-width: 600px){
+    .header{
+        height: 250px;
+        margin-bottom: -5%;
+    }
+    .title__name{
+        width: 280px;
+    }
+}
+@media (max-width: 380px){
     .header{
         height: 200px;
     }
     .title__name{
-        width: 300px;
+        width: 230px;
     }
 }
-@media (max-width: 350px){
+@media (max-width: 300px){
     .header{
-        height: 140px;
-        
-        margin-bottom: 1.7em;
+        margin-top: -10%;
+        margin-bottom: -5%;
     }
     .title__name{
-        width: 230px;
+        width: 200px;
+        top: 25%;
     }
 }
