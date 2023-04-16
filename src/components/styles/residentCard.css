@@ -1,0 +1,119 @@
+.resident{
+    background-color: rgba(0,4,38,1);
+    width: 280px;
+    border-radius: .3em;
+    overflow: hidden;
+    box-shadow: 3px 3px 10px rgb(0, 0, 0, .7);
+    transform: scale(1);
+}
+.resident:hover{
+    transform: scale(1.02);
+}
+.resident__header{
+    position: relative;
+}
+.resident__img{
+    position: relative;
+}
+.resident__status{
+    position: absolute;
+    top: 15%;
+    background-color: rgba(0,4,38,1);
+    display: flex;
+    align-items: center;
+    gap: .3em;
+    padding: .2em .4em;
+    border-top-right-radius: .3em;
+    border-bottom-right-radius: .3em;
+}
+.resident__status-circle{
+    background-color: lightgray;
+    box-shadow: 0 0 7px lightgray;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    animation: blink .9s infinite;
+}
+.Alive{
+    background-color: greenyellow;
+    box-shadow: 0 0 7px greenyellow;
+}
+.Dead{
+    background-color: red;
+    box-shadow: 0 0 7px red;
+}
+@keyframes blink{
+    50%{
+        opacity: .5;
+    }
+}
+.resident__section{
+    padding: .5em 1em;
+}
+.resident__name{
+    text-align: center;
+    font-weight: 500;
+}
+.resident__hr{
+    opacity: .3;
+}
+.resident__list{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+.resident__item{
+    display: flex;
+    flex-direction: column;
+}
+.resident__item-name{
+    font-size: 14px;
+    font-weight: 200;
+    font-style: italic;
+    opacity: .5;
+}
+.resident__item-data{
+    padding-left: 1em;
+}
+@media (max-width:600px){
+    .resident{
+        width: 200px;
+    }
+    .resident__status-circle{
+        width: 10px;
+        height: 10px;
+    }
+    .resident__status-status{
+        font-size: 12px;
+    }
+    .resident__name{
+        font-size: 14px;
+    }
+    .resident__list{
+        font-size: 12px;
+    }
+    .resident__item-name{
+        font-size: 10px;
+    }
+}
+@media (max-width: 350px){
+    .resident{
+        width: 150px;
+    }
+    .resident__status-circle{
+        width: 8px;
+        height: 8px;
+    }
+    .resident__status-status{
+        font-size: 10px;
+    }
+    .resident__name{
+        font-size: 12px;
+    }
+    .resident__list{
+        font-size: 10px;
+    }
+    .resident__item-name{
+        font-size: 8px;
+    }
+}
