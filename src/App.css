@@ -18,6 +18,12 @@ body{
     min-height: 100vh;
     position: relative;
 }
+.loading__ok{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 img{
     width: 100%;
 }
@@ -28,6 +34,8 @@ h1, h2, h3, h4, p, ul, li, span{
 ul{
     list-style: none;
 }
+
+/* App elements */
 .app__form{
     font-family: inherit;
     z-index: 1000;
@@ -39,6 +47,10 @@ ul{
     border-bottom-left-radius: .3em;
     border-top-left-radius: .3em;
 }
+.app__input::placeholder{
+    font-size: 12px;
+    opacity: .5;
+}
 .app__btn{
     font-family: inherit;
     border: none;
@@ -46,6 +58,7 @@ ul{
     height: 2rem;
     border-top-right-radius: .3em;
     border-bottom-right-radius: .3em;
+    cursor: pointer;
 }
 .footer{
     height: 50px;
